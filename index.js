@@ -5,13 +5,23 @@ function handleError(error){
   throw new Error(chalk.red((error.code, "Something went wrong")));
 }
 
-function getFile(filePath){
+//This function was syncronous
+/* function getFile(filePath){
   const encoding = "utf-8";
   fs.readFile(filePath, encoding, (error, text) => {
     error && handleError(error);
     console.log(chalk.green(text))
   })
 
+} */
+
+//this is the synchronous version
+function getFile(filePath){
+  const encoding = "utf-8";
+  fs.promises.readFile(filePath, encoding)
+    .then((text) => {console.log(chalk.green(text))})
+    .catch(handleError)
 }
 
-getFile('./aarchives/text.md');
+
+getFile('./archives/text.md');
