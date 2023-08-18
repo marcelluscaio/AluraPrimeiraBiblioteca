@@ -15,12 +15,23 @@ function handleError(error){
 
 } */
 
-//this is the synchronous version
-function getFile(filePath){
+//this is the asynchronous version with then
+/* function getFile(filePath){
   const encoding = "utf-8";
   fs.promises.readFile(filePath, encoding)
     .then((text) => {console.log(chalk.green(text))})
     .catch(handleError)
+} */
+
+//this is the asynchronous version with async await
+async function getFile(filePath){
+  const encoding = "utf-8";
+  try{
+    const text = await fs.promises.readFile(filePath, encoding);
+    console.log(chalk.green(text));
+  } catch(error){
+    handleError(error)
+  }
 }
 
 
