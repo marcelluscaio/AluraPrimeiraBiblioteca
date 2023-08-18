@@ -1,5 +1,12 @@
+import fs from 'fs';
 import chalk from "chalk";
 
-console.log(chalk.cyan("I'm blue!"));
+function getFile(filePath){
+  const encoding = "utf-8";
+  fs.readFile(filePath, encoding, (_, text) => {
+    console.log(chalk.green(text))
+  })
 
-console.log(chalk.red('olá mundo'));
+}
+
+getFile('./archives/text.md');
