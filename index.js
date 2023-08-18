@@ -36,7 +36,7 @@ async function getFile(filePath){
   }
 };
 
-async function getLinks(text){
+function getLinks(text){
   const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
 
   const capturedLinks = [...text.matchAll(regex)];
@@ -47,4 +47,4 @@ async function getLinks(text){
   console.log(titlePlusLink)
 }
 
-await getFile('./archives/text.md');
+getFile('./archives/text.md');
