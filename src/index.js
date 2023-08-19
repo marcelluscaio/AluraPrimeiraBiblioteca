@@ -47,4 +47,4 @@ function getLinks(text){
   console.log(titlePlusLink)
 }
 
-getFile('./archives/text.md');
+export default getFile;
