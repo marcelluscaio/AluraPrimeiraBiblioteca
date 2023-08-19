@@ -28,7 +28,7 @@ async function getFile(filePath){
   try{
     const text = await fs.promises.readFile(filePath, encoding);
     //console.log(chalk.green(text));
-    getLinks(text);
+    return getLinks(text);
   } catch(error){
     handleError(error)
   } finally {
@@ -44,7 +44,7 @@ function getLinks(text){
   const titlePlusLink = capturedLinks.map(link => ({[link[1]]: link[2]}));
   //o link[1] precisa dos colchetes por causa disso: https://javascript.info/object#computed-properties
   
-  console.log(titlePlusLink)
+  return titlePlusLink.length === 0 ? "No links found" : titlePlusLink;
 }
 
 export default getFile;
