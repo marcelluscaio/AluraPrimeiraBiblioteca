@@ -10,4 +10,12 @@ In the course we worked with the possibility of a path being a file or a directo
 
 
 ### How to run
+Install the package by typing "npm i check-links-caiocabral-alura" on your command line.
 
+After that, copy this script into your package.json:
+"scripts": {
+    "check": "node node_modules/check-links-caiocabral-alura/src/cli.js",
+    "validate": "node node_modules/check-links-caiocabral-alura/src/cli.js --validate"
+  }
+
+To get the links from files, type "npm run check <path>" in the command line. To check if they are valid, type "npm run validate <path>"
