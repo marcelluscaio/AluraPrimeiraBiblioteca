@@ -1,6 +1,6 @@
 {
   "name": "check-links-caiocabral-alura",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This program get a url path and looks for links in all files",
   "main": "./src/cli.js",
   "type": "module",
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/alura-cursos/2708-node-lib-md.git"
   },
-  "keywords": ["links", "scrapper"],
+  "keywords": [
+    "links",
+    "scrapper"
+  ],
   "author": "Caio Cabral <ocaiocabral@gmail.com> (https://github.com/marcelluscaio)",
   "license": "copyleft-next 0.3.1",
   "bugs": {
