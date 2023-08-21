@@ -1,8 +1,8 @@
 {
-  "name": "2708-node-lib-md",
+  "name": "check-links-caiocabral-alura",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This program get a url path and looks for links in all files",
+  "main": "./src/cli.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,14 +13,19 @@
     "type": "git",
     "url": "git+https://github.com/alura-cursos/2708-node-lib-md.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["links", "scrapper"],
+  "author": "Caio Cabral <ocaiocabral@gmail.com> (https://github.com/marcelluscaio)",
+  "license": "copyleft-next 0.3.1",
   "bugs": {
-    "url": "https://github.com/alura-cursos/2708-node-lib-md/issues"
+    "url": "https://github.com/marcelluscaio/AluraPrimeiraBiblioteca/issues",
+    "email": "ocaiocabral@gmail.com"
   },
-  "homepage": "https://github.com/alura-cursos/2708-node-lib-md#readme",
+  "homepage": "https://github.com/marcelluscaio/AluraPrimeiraBiblioteca",
   "dependencies": {
     "chalk": "5.0.1"
-  }
+  },
+  "bin": {
+    "check-links-caiocabral-alura": "./src/cli.js"
+  },
+  "preferGlobal": true
 }

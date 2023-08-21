@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import fs from 'fs';
 import getFile from "./index.js";
 import chalk from "chalk";
@@ -29,7 +30,6 @@ async function getResult(path){
     const paths = await fs.promises.readdir(path);
     paths.forEach(fileOrDirPath => getResult(path.concat('/', fileOrDirPath)))
   }
-  
 }
 
 getResult(path);

@@ -27,7 +27,6 @@ async function getFile(filePath){
   const encoding = "utf-8";
   try{
     const text = await fs.promises.readFile(filePath, encoding);
-    //console.log(chalk.green(text));
     return getLinks(text);
   } catch(error){
     handleError(error)
@@ -38,11 +37,9 @@ async function getFile(filePath){
 
 function getLinks(text){
   const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
-
   const capturedLinks = [...text.matchAll(regex)];
-  
   const titlePlusLink = capturedLinks.map(link => ({[link[1]]: link[2]}));
-  //o link[1] precisa dos colchetes por causa disso: https://javascript.info/object#computed-properties
+  //link[1] needs square backets becaus of this: https://javascript.info/object#computed-properties
   
   return titlePlusLink.length === 0 ? "No links found" : titlePlusLink;
 }
