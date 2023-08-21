@@ -1,6 +1,6 @@
 {
   "name": "check-links-caiocabral-alura",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This program get a url path and looks for links in all files",
   "main": "src/cli.js",
   "type": "module",
